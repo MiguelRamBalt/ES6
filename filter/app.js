@@ -21,7 +21,7 @@ Assign the result to the variable 'filteredUsers'.
 Don't forget to use the 'return' keyword in the function!
 
 var users = [
- { id: 1, admin: true },  
+ { id: 1, admin: true },
  { id: 2, admin: false },
  { id: 3, admin: false },
  { id: 4, admin: false },
@@ -33,7 +33,7 @@ var filteredUsers;
 */
 var userChose={id:1,adm:true};
 var users = [
- { id: 1, admin: true },  
+ { id: 1, admin: true },
  { id: 2, admin: false },
  { id: 3, admin: false },
  { id: 4, admin: false },
@@ -50,8 +50,8 @@ function choseAdminLvl(userChose,users) {
 filteredUsers = choseAdminLvl(userChose,users);
 
 /*
-This is a hard one!  Create a function called 'reject'.  
-Reject should work in the opposite way of 'filter' - if a function returns 'true', the item should *not* be included in the new array.  
+This is a hard one!  Create a function called 'reject'.
+Reject should work in the opposite way of 'filter' - if a function returns 'true', the item should *not* be included in the new array.
 Hint: you can reuse filter.
 
 
@@ -69,5 +69,10 @@ function reject(array, iteratorFunction) {
   return array.filter(iteratorFunction);
 }
 
+lessThanFifteen =reject(numbers,(number)=>{
+    if(number===10)
+        return false;
 
-lessThanFifteen= reject(numbers,function(number){return number !== 10;});
+    return true;
+
+});
